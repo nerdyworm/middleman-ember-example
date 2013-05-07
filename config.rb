@@ -1,8 +1,5 @@
-Sprockets::HandlebarsTemplate.options = {
-  target: "Ember.TEMPLATES",
-  key_name_proc: proc { |name| name.sub(%r~^app/templates/~, "") },
-  precompile: true,
-  precompile_proc: proc { |source| Barber::FilePrecompiler.call(source) }
+MiddlemanEmber::HandlebarsTemplate.options = {
+  template_path: "app/templates"
 }
 
 set :css_dir, 'stylesheets'
